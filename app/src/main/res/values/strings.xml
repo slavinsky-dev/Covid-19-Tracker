@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Covid-19 Tracker</string>
+
+    <string name="toast_back_exit">Click BACK again to exit</string>
+</resources>

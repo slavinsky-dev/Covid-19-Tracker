@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#D50000</color>
+
+    <color name="backgroundMain">#000</color>
+    <color name="textColor">#CDCDCD</color>
+    <color name="textColorStage1">#FFF29D</color>
+    <color name="textColorStage2">#FFF200</color>
+    <color name="textColorStage3">#FFB700</color>
+    <color name="textColorStage4">#FF6F00</color>
+    <color name="textColorStage5">#FF2600</color>
+    <color name="textColorStage6">#CA1111</color>
+    <color name="textColorStage7">#9F3B1C</color>
+
+    <color name="textColorRecovered">#55DD00</color>
+</resources>
