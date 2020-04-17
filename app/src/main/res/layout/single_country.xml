@@ -9,65 +9,146 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
         android:background="@color/backgroundMain">
 
         <TextView
             android:id="@+id/textViewCountryName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="27sp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textSize="28sp"
             android:textColor="@color/textColor"
             tools:text="COUNTRY"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
+            android:id="@+id/textViewNewConfirmedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:text="@string/new_confirmed"
+            app:layout_constraintTop_toBottomOf="@id/textViewCountryName"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
             android:id="@+id/textViewNewConfirmed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:textSize="16sp"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/textViewCountryName"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTotalConfirmedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:text="@string/total_confirmed"
+            app:layout_constraintTop_toBottomOf="@id/textViewNewConfirmedTitle"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textViewTotalConfirmed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:textSize="16sp"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/textViewNewConfirmed"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewNewDeathsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:text="@string/new_deaths"
+            app:layout_constraintTop_toBottomOf="@id/textViewTotalConfirmedTitle"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textViewNewDeaths"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:textSize="16sp"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/textViewTotalConfirmed"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTotalDeathsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:text="@string/total_deaths"
+            app:layout_constraintTop_toBottomOf="@id/textViewNewDeathsTitle"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textViewTotalDeaths"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:textSize="16sp"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/textViewNewDeaths"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewNewRecoveredTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:text="@string/new_recovered"
+            app:layout_constraintTop_toBottomOf="@id/textViewTotalDeathsTitle"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textViewNewRecovered"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:textSize="16sp"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/textViewTotalDeaths"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTotalRecoveredTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:text="@string/total_recovered"
+            app:layout_constraintTop_toBottomOf="@id/textViewNewRecoveredTitle"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textViewTotalRecovered"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:textSize="16sp"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/textViewNewRecovered"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
 

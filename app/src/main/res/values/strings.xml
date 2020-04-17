@@ -2,4 +2,10 @@
     <string name="app_name">Covid-19 Tracker</string>
 
     <string name="toast_back_exit">Click BACK again to exit</string>
+    <string name="new_confirmed">NEW CONFIRMED</string>
+    <string name="total_confirmed">TOTAL CONFIRMED</string>
+    <string name="new_deaths">NEW DEATHS</string>
+    <string name="total_deaths">TOTAL DEATHS</string>
+    <string name="new_recovered">NEW RECOVERED</string>
+    <string name="total_recovered">TOTAL RECOVERED</string>
 </resources>

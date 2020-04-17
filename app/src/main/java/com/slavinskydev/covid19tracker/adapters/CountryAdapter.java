@@ -18,7 +18,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
 
     private List<Country> countries;
     private String date;
-    Context context;
+    private Context context;
 
     public List<Country> getCountries() {
         return countries;
@@ -61,19 +61,57 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
             holder.textViewTotalRecovered.setText(String.valueOf(country.getTotalRecovered()));
 
             holder.textViewNewConfirmed.setTextColor(context.getResources().getColor(R.color.textColor));
+            holder.textViewNewConfirmedTitle.setTextColor(context.getResources().getColor(R.color.textColor));
             holder.textViewTotalConfirmed.setTextColor(context.getResources().getColor(R.color.textColor));
+            holder.textViewTotalConfirmedTitle.setTextColor(context.getResources().getColor(R.color.textColor));
             holder.textViewNewDeaths.setTextColor(context.getResources().getColor(R.color.textColor));
+            holder.textViewNewDeathsTitle.setTextColor(context.getResources().getColor(R.color.textColor));
             holder.textViewTotalDeaths.setTextColor(context.getResources().getColor(R.color.textColor));
+            holder.textViewTotalDeathsTitle.setTextColor(context.getResources().getColor(R.color.textColor));
 
             if (country.getTotalRecovered() != 0) {
                 holder.textViewTotalRecovered.setTextColor(context.getResources().getColor(R.color.textColorRecovered));
+                holder.textViewTotalRecoveredTitle.setTextColor(context.getResources().getColor(R.color.textColorRecovered));
             } else {
                 holder.textViewTotalRecovered.setTextColor(context.getResources().getColor(R.color.textColor));
+                holder.textViewTotalRecoveredTitle.setTextColor(context.getResources().getColor(R.color.textColor));
             }
             if (country.getNewRecovered() != 0) {
                 holder.textViewNewRecovered.setTextColor(context.getResources().getColor(R.color.textColorRecovered));
+                holder.textViewNewRecoveredTitle.setTextColor(context.getResources().getColor(R.color.textColorRecovered));
             } else {
                 holder.textViewNewRecovered.setTextColor(context.getResources().getColor(R.color.textColor));
+                holder.textViewNewRecoveredTitle.setTextColor(context.getResources().getColor(R.color.textColor));
+            }
+
+            if (country.getTotalDeaths() != 0) {
+                holder.textViewTotalDeaths.setTextColor(context.getResources().getColor(R.color.textColorStage5));
+                holder.textViewTotalDeathsTitle.setTextColor(context.getResources().getColor(R.color.textColorStage5));
+            } else {
+                holder.textViewTotalDeaths.setTextColor(context.getResources().getColor(R.color.textColor));
+                holder.textViewTotalDeathsTitle.setTextColor(context.getResources().getColor(R.color.textColor));
+            }
+            if (country.getNewDeaths() != 0) {
+                holder.textViewNewDeaths.setTextColor(context.getResources().getColor(R.color.textColorStage5));
+                holder.textViewNewDeathsTitle.setTextColor(context.getResources().getColor(R.color.textColorStage5));
+            } else {
+                holder.textViewNewDeaths.setTextColor(context.getResources().getColor(R.color.textColor));
+                holder.textViewNewDeathsTitle.setTextColor(context.getResources().getColor(R.color.textColor));
+            }
+
+            if (country.getTotalConfirmed() != 0) {
+                holder.textViewTotalConfirmed.setTextColor(context.getResources().getColor(R.color.textColorStage2));
+                holder.textViewTotalConfirmedTitle.setTextColor(context.getResources().getColor(R.color.textColorStage2));
+            } else {
+                holder.textViewTotalConfirmed.setTextColor(context.getResources().getColor(R.color.textColor));
+                holder.textViewTotalConfirmedTitle.setTextColor(context.getResources().getColor(R.color.textColor));
+            }
+            if (country.getNewConfirmed() != 0) {
+                holder.textViewNewConfirmed.setTextColor(context.getResources().getColor(R.color.textColorStage2));
+                holder.textViewNewConfirmedTitle.setTextColor(context.getResources().getColor(R.color.textColorStage2));
+            } else {
+                holder.textViewNewConfirmed.setTextColor(context.getResources().getColor(R.color.textColor));
+                holder.textViewNewConfirmedTitle.setTextColor(context.getResources().getColor(R.color.textColor));
             }
 
             holder.textViewCountryName.setTextColor(context.getResources().getColor(R.color.textColor));
@@ -111,40 +149,65 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
 
         private TextView textViewCountryName;
         private TextView textViewNewConfirmed;
+        private TextView textViewNewConfirmedTitle;
         private TextView textViewTotalConfirmed;
+        private TextView textViewTotalConfirmedTitle;
         private TextView textViewNewDeaths;
+        private TextView textViewNewDeathsTitle;
         private TextView textViewTotalDeaths;
+        private TextView textViewTotalDeathsTitle;
         private TextView textViewNewRecovered;
+        private TextView textViewNewRecoveredTitle;
         private TextView textViewTotalRecovered;
+        private TextView textViewTotalRecoveredTitle;
 
-        public CountryViewHolder(@NonNull View itemView) {
+        CountryViewHolder(@NonNull View itemView) {
             super(itemView);
 
             textViewCountryName = itemView.findViewById(R.id.textViewCountryName);
             textViewNewConfirmed = itemView.findViewById(R.id.textViewNewConfirmed);
+            textViewNewConfirmedTitle = itemView.findViewById(R.id.textViewNewConfirmedTitle);
             textViewTotalConfirmed = itemView.findViewById(R.id.textViewTotalConfirmed);
+            textViewTotalConfirmedTitle = itemView.findViewById(R.id.textViewTotalConfirmedTitle);
             textViewNewDeaths = itemView.findViewById(R.id.textViewNewDeaths);
+            textViewNewDeathsTitle = itemView.findViewById(R.id.textViewNewDeathsTitle);
             textViewTotalDeaths = itemView.findViewById(R.id.textViewTotalDeaths);
+            textViewTotalDeathsTitle = itemView.findViewById(R.id.textViewTotalDeathsTitle);
             textViewNewRecovered = itemView.findViewById(R.id.textViewNewRecovered);
+            textViewNewRecoveredTitle = itemView.findViewById(R.id.textViewNewRecoveredTitle);
             textViewTotalRecovered = itemView.findViewById(R.id.textViewTotalRecovered);
+            textViewTotalRecoveredTitle = itemView.findViewById(R.id.textViewTotalRecoveredTitle);
+
 
             textViewCountryName.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (textViewNewConfirmed.getVisibility() == View.GONE) {
                         textViewNewConfirmed.setVisibility(View.VISIBLE);
+                        textViewNewConfirmedTitle.setVisibility(View.VISIBLE);
                         textViewTotalConfirmed.setVisibility(View.VISIBLE);
+                        textViewTotalConfirmedTitle.setVisibility(View.VISIBLE);
                         textViewNewDeaths.setVisibility(View.VISIBLE);
+                        textViewNewDeathsTitle.setVisibility(View.VISIBLE);
                         textViewTotalDeaths.setVisibility(View.VISIBLE);
+                        textViewTotalDeathsTitle.setVisibility(View.VISIBLE);
                         textViewNewRecovered.setVisibility(View.VISIBLE);
+                        textViewNewRecoveredTitle.setVisibility(View.VISIBLE);
                         textViewTotalRecovered.setVisibility(View.VISIBLE);
+                        textViewTotalRecoveredTitle.setVisibility(View.VISIBLE);
                     } else {
                         textViewNewConfirmed.setVisibility(View.GONE);
+                        textViewNewConfirmedTitle.setVisibility(View.GONE);
                         textViewTotalConfirmed.setVisibility(View.GONE);
+                        textViewTotalConfirmedTitle.setVisibility(View.GONE);
                         textViewNewDeaths.setVisibility(View.GONE);
+                        textViewNewDeathsTitle.setVisibility(View.GONE);
                         textViewTotalDeaths.setVisibility(View.GONE);
+                        textViewTotalDeathsTitle.setVisibility(View.GONE);
                         textViewNewRecovered.setVisibility(View.GONE);
+                        textViewNewRecoveredTitle.setVisibility(View.GONE);
                         textViewTotalRecovered.setVisibility(View.GONE);
+                        textViewTotalRecoveredTitle.setVisibility(View.GONE);
                     }
                 }
             });
