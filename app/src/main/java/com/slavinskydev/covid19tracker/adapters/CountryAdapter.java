@@ -145,7 +145,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
         return countries.size();
     }
 
-    class CountryViewHolder extends RecyclerView.ViewHolder {
+    static class CountryViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textViewCountryName;
         private TextView textViewNewConfirmed;
